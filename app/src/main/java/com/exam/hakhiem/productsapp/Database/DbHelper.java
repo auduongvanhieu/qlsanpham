@@ -3,10 +3,11 @@ package com.exam.hakhiem.productsapp.Database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.exam.hakhiem.productsapp.Model.Product;
+import com.exam.hakhiem.productsapp.View.AddProductActivity;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -54,6 +55,7 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(Product.COLUMN_PRICE, pro.getPrice());
         values.put(Product.COLUMN_IMAGE, pro.getImage());
         values.put(Product.COLUMN_PRODUCT_ID, pro.getProductId());
+        values.put(Product.COLUMN_DATE, pro.getDate().toString());
 
         // insert row
         long id = db.insert(pro.TABLE_PRODUCT, null, values);
@@ -143,13 +145,4 @@ public class DbHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(pro.getProductId())});
         db.close();
     }
-
-    public DbHelper(@androidx.annotation.Nullable Context context, @androidx.annotation.Nullable String name, @androidx.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-    }
-
-    public DbHelper(@androidx.annotation.Nullable Context context, @androidx.annotation.Nullable String name, @androidx.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version, @androidx.annotation.Nullable DatabaseErrorHandler errorHandler) {
-        super(context, name, factory, version, errorHandler);
-    }
-
 }

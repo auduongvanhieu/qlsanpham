@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.exam.hakhiem.productsapp.Model.Product;
 import com.exam.hakhiem.productsapp.R;
+import com.exam.hakhiem.productsapp.View.AdminActivity;
 
 import java.util.ArrayList;
 
@@ -44,7 +45,8 @@ public class ProductListAdapter extends BaseAdapter {
         }
         holder.proName.setText(listData.get(position).getName());
         holder.proPrice.setText(listData.get(position).getPrice()+"");
-        holder.proDate.setText(listData.get(position).getDate().toString());
+        String dateText = AdminActivity.dateFormat.format(listData.get(position).getDate());
+        holder.proDate.setText(dateText);
         return v;
     }
     static class ViewHolder {

@@ -1,8 +1,10 @@
 package com.exam.hakhiem.productsapp.Model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Product {
+
     public static final String TABLE_PRODUCT = "Products";
 
     public static final String COLUMN_PRODUCT_ID = "ProductId";
@@ -25,7 +27,7 @@ public class Product {
                     + COLUMN_NAME + " TEXT,"
                     + COLUMN_PRICE + " REAL,"
                     + COLUMN_IMAGE + " TEXT,"
-                    + COLUMN_DATE + " DATETIME DEFAULT CURRENT_TIMESTAMP"
+                    + COLUMN_DATE + " TEXT"
                     + ")";
 
     public Product() {

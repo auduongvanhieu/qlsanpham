@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.MainActivity"
-    android:orientation="vertical">
+    android:gravity="center"
+    android:paddingHorizontal="30dp"
+    android:orientation="vertical"
+    tools:context=".View.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Danh sách sản phẩm"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:textColor="#000000" />
-    <ListView
-        android:id="@+id/user_list"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+    <ImageView
+            android:src="@drawable/banner_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+            android:id="@+id/edt_username"
+            android:textColor="#000000"
+            android:hint="Nhập username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+            android:id="@+id/edt_password"
+            android:textColor="#000000"
+            android:hint="Nhập password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <CheckBox
+            android:id="@+id/chb_remember"
+            android:text="Nhớ mật khẩu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/btn_login"
+                    android:text="Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:id="@+id/btn_cancel"
+                    android:text="Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 </LinearLayout>

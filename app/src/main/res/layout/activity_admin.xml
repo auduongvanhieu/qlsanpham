@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.AdminActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách sản phẩm"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+    <ListView
+        android:id="@+id/lv_product"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <Button
+            android:id="@+id/btn_go_add"
+            android:text="Thêm sản phẩm mới"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
