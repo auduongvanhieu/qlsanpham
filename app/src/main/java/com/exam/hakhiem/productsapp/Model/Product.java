@@ -1,9 +1,10 @@
 package com.exam.hakhiem.productsapp.Model;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Product {
+public class Product implements Serializable {
 
     public static final String TABLE_PRODUCT = "Products";
 
